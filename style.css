@@ -1,0 +1,149 @@
+/* =========================================================
+   shared styles for riley brown's site
+   edit colors/spacing here once; every page picks it up.
+   ========================================================= */
+
+:root {
+    --ink: #000;
+    --muted: #555;
+    --link: blue;
+    --max: 820px;     /* page width, matches home */
+    --measure: 680px; /* comfortable reading width for prose */
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 40px 20px 90px 20px;
+    max-width: var(--max);
+    margin: 0 auto;
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+h1 { font-size: 28px; margin: 0 0 6px 0; }
+h2 { font-size: 18px; margin: 34px 0 10px 0; }
+p  { margin: 0 0 16px 0; }
+
+a { color: var(--link); text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+/* back-home link on subpages */
+.back {
+    display: inline-block;
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* one-line intro under the h1 (matches the home bio) */
+.lead {
+    font-size: 14.5px;
+    max-width: var(--measure);
+    margin-bottom: 30px;
+}
+
+/* long-form prose: blog posts, etc. */
+.prose { max-width: var(--measure); }
+.prose p { font-size: 15px; }
+.prose ul { padding-left: 20px; }
+
+/* papers / projects — plain lines, your name bold in author lists */
+.paper { max-width: var(--measure); margin-bottom: 22px; }
+.paper .title   { font-weight: bold; }
+.paper .authors,
+.paper .venue,
+.paper .links   { font-size: 14px; }
+.self { font-weight: bold; }
+
+/* coursework — plain list */
+.courses { list-style: none; padding: 0; max-width: var(--measure); }
+.courses li { margin-bottom: 5px; font-size: 14.5px; }
+.courses .code { color: var(--muted); }
+
+/* blog index — plain list, just a date and a title */
+.posts { list-style: none; padding: 0; max-width: var(--measure); }
+.posts li { margin-bottom: 14px; }
+.posts .date { color: var(--muted); font-size: 13px; display: block; }
+
+/* puzzle games — plain list */
+.games { list-style: none; padding: 0; max-width: var(--measure); }
+.games li { margin-bottom: 16px; }
+.games .name { font-weight: bold; }
+.games .blurb { font-size: 14px; margin: 2px 0 0 0; }
+
+/* travel — responsive grid, photos keep their natural shape */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+    align-items: start;
+}
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; display: block; }
+.gallery figcaption { font-size: 13px; color: var(--muted); margin-top: 5px; }
+
+@media (max-width: 650px) {
+    body { padding: 22px 16px 70px 16px; }
+    h1 { font-size: 24px; }
+    .gallery { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+/* =========================================================
+   home page (index.html) — scoped so it can't touch subpages
+   ========================================================= */
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 50px;
+    align-items: start;
+}
+.content-container h1 { grid-column: 1; margin-top: 0; }
+
+.bio-paragraph { grid-column: 1; margin-bottom: 30px; font-size: 14.5px; }
+
+.category-list {
+    grid-column: 1;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.category-list li { margin-bottom: 8px; }
+
+.right-column { grid-column: 2; grid-row: 1 / span 3; flex-shrink: 0; }
+.profile-pic { width: 230px; height: auto; display: block; }
+
+.contact   { position: fixed; bottom: 10px; left: 20px;  font-size: 14px; background: #fff; margin: 0; }
+
+/* signature in the bottom-right corner of EVERY page */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+    height: 35px;
+    background: url('/images/signature.png') no-repeat right bottom;
+    background-size: contain;
+    pointer-events: none; /* never blocks clicks on links beneath it */
+}
+
+@media (max-width: 650px) {
+    .content-container { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+    .content-container h1 { order: 1; margin-bottom: 15px; }
+    .right-column { order: 2; margin-bottom: 20px; }
+    .profile-pic { width: 180px; }
+    .bio-paragraph { order: 3; margin-bottom: 25px; }
+    .category-list { order: 4; margin-bottom: 40px; }
+    .contact { position: static; display: block; margin-top: 20px; background: none; }
+}
