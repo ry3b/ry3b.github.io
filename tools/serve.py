@@ -30,6 +30,11 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def end_headers(self):
+        # previews are rebuilt constantly; a cached cv.pdf reads as "my edit did nothing"
+        self.send_header("Cache-Control", "no-store")
+        super().end_headers()
+
     def do_GET(self):
         if self.path.rstrip("/") == "/_editor":
             with open(EDITOR, "rb") as fh:
