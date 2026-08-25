@@ -1,0 +1,228 @@
+{
+  "profile": {
+    "name": "Riley Brown",
+    "email": "rydb@proton.me",
+    "email_school": "rbrown71@nebraska.edu",
+    "site": "ry3b.github.io",
+    "github": "ry3b",
+    "phone": "",
+    "location": "Lincoln, NE",
+    "resume_summary": ""
+  },
+  "education": [
+    {
+      "institution": "University of Nebraska-Lincoln",
+      "degree": "B.S. Mathematics and Computer Science",
+      "location": "Lincoln, NE",
+      "start": "",
+      "end": "2027-05",
+      "details": [],
+      "resume": true,
+      "expected": true
+    },
+    {
+      "institution": "Budapest Semesters in Mathematics",
+      "degree": "Study abroad, mathematics",
+      "location": "Budapest, Hungary",
+      "start": "",
+      "end": "",
+      "details": [],
+      "resume": true
+    }
+  ],
+  "research": [
+    {
+      "role": "Research Assistant — pseudorandomness",
+      "org": "North Carolina State University",
+      "location": "Raleigh, NC",
+      "advisor": "",
+      "start": "",
+      "end": "present",
+      "highlights": [],
+      "resume": true
+    },
+    {
+      "role": "Research Assistant — 3-uniform hypergraphic degree sequences, FPT algorithm feasibility",
+      "org": "Budapest Semesters in Mathematics",
+      "location": "Budapest, Hungary",
+      "advisor": "",
+      "start": "",
+      "end": "",
+      "highlights": [],
+      "resume": true
+    },
+    {
+      "role": "Summer Researcher — algorithm design",
+      "org": "Harvey Mudd College",
+      "location": "Claremont, CA",
+      "advisor": "",
+      "start": "",
+      "end": "",
+      "highlights": [],
+      "resume": true
+    },
+    {
+      "role": "Undergraduate Researcher — tiling theory",
+      "org": "University of Nebraska-Lincoln",
+      "location": "Lincoln, NE",
+      "advisor": "",
+      "start": "",
+      "end": "",
+      "highlights": [],
+      "resume": true
+    }
+  ],
+  "papers": [],
+  "projects": [],
+  "coursework": [
+    {
+      "area": "Mathematics",
+      "courses": [
+        {
+          "name": "Bijective Partition Theory",
+          "code": "MATH 958",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Discrete Mathematics",
+          "code": "MATH 850",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Matroid Theory",
+          "code": "BSM/ELTE",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Advanced Combinatorics",
+          "code": "BSM CO2",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Conjecture and Proof",
+          "code": "BSM C&P",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Discrete and Convex Geometry",
+          "code": "BSM DCG",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Graph Theory",
+          "code": "MATH 452",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Group Theory",
+          "code": "MATH 417",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Probability Theory",
+          "code": "MATH 487",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Stochastic Processes",
+          "code": "MATH 489",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Elementary Analysis",
+          "code": "MATH 325",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Intro to Modern Algebra",
+          "code": "MATH 310",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Linear Algebra",
+          "code": "MATH 314",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Differential Equations",
+          "code": "MATH 221",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Multivariable Calculus",
+          "code": "MATH 208H",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Math in the City",
+          "code": "MATH 435",
+          "grad": false,
+          "resume": false
+        }
+      ]
+    },
+    {
+      "area": "Computer Science",
+      "courses": [
+        {
+          "name": "Development and Analysis of Algorithms",
+          "code": "CSCE 923",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Automata, Computation, and Language",
+          "code": "CSCE 428",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Data Structures and Algorithms",
+          "code": "CSCE 310",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Data Analysis",
+          "code": "CSCE 320",
+          "grad": false,
+          "resume": true
+        },
+        {
+          "name": "Math for Machine Learning",
+          "code": "MATH 391",
+          "grad": false,
+          "resume": true
+        }
+      ]
+    }
+  ],
+  "awards": [],
+  "talks": [],
+  "teaching": [],
+  "skills": [
+    {
+      "area": "Languages",
+      "items": []
+    },
+    {
+      "area": "Tools",
+      "items": []
+    }
+  ]
+}
