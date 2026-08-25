@@ -14,7 +14,7 @@
 html { -webkit-text-size-adjust: 100%; }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     padding: 40px 20px 90px 20px;
     max-width: var(--max);
     margin: 0 auto;
