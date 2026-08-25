@@ -73,7 +73,16 @@
     }
   ],
   "papers": [],
-  "projects": [],
+  "projects": [
+    {
+      "name": "Poker Trainer",
+      "url": "",
+      "blurb": "A terminal and Tkinter drill trainer for poker skills: pot odds, combos, equity, bet sizing, push/fold and ICM, with an adaptive scheduler that weights drills by weakness and staleness.",
+      "tech": "python",
+      "year": "2026",
+      "resume": true
+    }
+  ],
   "coursework": [
     {
       "area": "Mathematics",
