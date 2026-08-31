@@ -37,10 +37,10 @@ def check(data):
     """Fields that render as a red [marker] in the PDFs."""
     gaps = []
     for e in data.get("education", []):
-        if not (e.get("start") and e.get("end")):
+        if not (e.get("dates") or (e.get("start") and e.get("end"))):
             gaps.append("education: %s has no dates" % e.get("institution", "?"))
     for r in data.get("research", []):
-        if not (r.get("start") and r.get("end")):
+        if not (r.get("dates") or (r.get("start") and r.get("end"))):
             gaps.append("research: %s has no dates" % r.get("org", "?"))
         if not r.get("highlights"):
             gaps.append("research: %s has no bullets (the resume leans on these)" % r.get("org", "?"))

@@ -49,7 +49,7 @@ def entry(dates, title, subtitle, location):
 def education(rows, sep="--"):
     out = []
     for e in sorted(rows, key=sortkey, reverse=True):
-        dates = daterange(e.get("start"), e.get("end"), sep=sep)
+        dates = esc(e["dates"]) if e.get("dates") else daterange(e.get("start"), e.get("end"), sep=sep)
         if e.get("expected"):
             dates = "Expected " + dates
         out.append(entry(
@@ -69,7 +69,7 @@ def research(rows, sep="--"):
         if r.get("advisor"):
             sub += r" \; \emph{advisor:} %s" % esc(r["advisor"])
         out.append(entry(
-            daterange(r.get("start"), r.get("end"), sep=sep),
+            esc(r["dates"]) if r.get("dates") else daterange(r.get("start"), r.get("end"), sep=sep),
             fill(r.get("role"), "role"),
             sub,
             esc(r.get("location", "")),

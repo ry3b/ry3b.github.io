@@ -8,13 +8,17 @@ generated pages can be checked right after a build.
 """
 import json
 import os
+import shutil
 import subprocess
 import sys
+import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "cv.json")
 EDITOR = os.path.join(ROOT, "tools", "editor.html")
+BACKUPS = os.path.join(ROOT, "data", "backups")
+KEEP_BACKUPS = 50
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -53,6 +57,14 @@ class Handler(SimpleHTTPRequestHandler):
                 data = json.loads(raw)
             except json.JSONDecodeError as exc:
                 return self._send(400, json.dumps({"error": "not valid JSON: %s" % exc}))
+            # keep the outgoing version: an overwrite must never be the end of it
+            if os.path.exists(DATA):
+                os.makedirs(BACKUPS, exist_ok=True)
+                shutil.copy2(DATA, os.path.join(
+                    BACKUPS, "cv-%s.json" % time.strftime("%Y%m%d-%H%M%S")))
+                old = sorted(os.listdir(BACKUPS))[:-KEEP_BACKUPS]
+                for name in old:
+                    os.remove(os.path.join(BACKUPS, name))
             # write to a temp file first: a crash mid-write must not destroy the CV
             tmp = DATA + ".tmp"
             with open(tmp, "w") as fh:

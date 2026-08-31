@@ -1,5 +1,7 @@
 """LaTeX helpers: escaping, dates, and loud markers for data I don't have yet."""
 
+import re
+
 SPECIALS = {
     "\\": r"\textbackslash{}",
     "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
@@ -43,8 +45,16 @@ def daterange(start, end, label="dates", sep="--"):
     return r"\FILL{%s}" % esc(label)
 
 
+SEASONS = {"spring": 3, "summer": 6, "fall": 9, "autumn": 9, "winter": 12}
+
+
 def sortkey(entry):
     """Newest first. 'present' sorts above any real date."""
+    if entry.get("dates") and not (entry.get("start") or entry.get("end")):
+        text = entry["dates"].lower()
+        years = [int(y) for y in re.findall(r"\b((?:19|20)\d{2})\b", entry["dates"])]
+        season = next((m for word, m in SEASONS.items() if word in text), 0)
+        return (max(years) if years else 0, season)
     end = (entry.get("end") or "").strip().lower()
     if end == "present":
         return (9999, 99)

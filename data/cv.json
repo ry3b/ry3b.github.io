@@ -5,7 +5,7 @@
     "email_school": "rbrown71@nebraska.edu",
     "site": "ry3b.github.io",
     "github": "ry3b",
-    "phone": "",
+    "phone": "531-333-1615",
     "location": "Lincoln, NE",
     "resume_summary": ""
   },
@@ -14,9 +14,12 @@
       "institution": "University of Nebraska-Lincoln",
       "degree": "B.S. Mathematics and Computer Science",
       "location": "Lincoln, NE",
-      "start": "",
+      "start": "2023-05",
       "end": "2027-05",
-      "details": [],
+      "details": [
+        "GPA 3.92/4.00",
+        "University Honors Program"
+      ],
       "resume": true,
       "expected": true
     },
@@ -24,8 +27,8 @@
       "institution": "Budapest Semesters in Mathematics",
       "degree": "Study abroad, mathematics",
       "location": "Budapest, Hungary",
-      "start": "",
-      "end": "",
+      "start": "2026-01",
+      "end": "2026-06",
       "details": [],
       "resume": true
     }
@@ -35,7 +38,7 @@
       "role": "Research Assistant — pseudorandomness",
       "org": "North Carolina State University",
       "location": "Raleigh, NC",
-      "advisor": "",
+      "advisor": "Professor Chin Ho Lee",
       "start": "",
       "end": "present",
       "highlights": [],
@@ -45,7 +48,7 @@
       "role": "Research Assistant — 3-uniform hypergraphic degree sequences, FPT algorithm feasibility",
       "org": "Budapest Semesters in Mathematics",
       "location": "Budapest, Hungary",
-      "advisor": "",
+      "advisor": "Professor Istvan Miklos",
       "start": "",
       "end": "",
       "highlights": [],
@@ -55,24 +58,70 @@
       "role": "Summer Researcher — algorithm design",
       "org": "Harvey Mudd College",
       "location": "Claremont, CA",
-      "advisor": "",
+      "advisor": "Professor Tim Randolph",
       "start": "",
       "end": "",
-      "highlights": [],
-      "resume": true
+      "highlights": [
+        "Collaborated with a team of four students to analyze and improve exponential-time algorithms for the sumset recognition problem, an NP-complete problem in additive combinatorics",
+        "Enhanced branching approaches and refined base case parameters for graph-theoretic reduction methods through systematic analysis of algorithmic complexity",
+        "Presented findings at the REU symposium and continued independent exploration of the problem space"
+      ],
+      "resume": true,
+      "dates": "Summer 2025"
     },
     {
       "role": "Undergraduate Researcher — tiling theory",
       "org": "University of Nebraska-Lincoln",
       "location": "Lincoln, NE",
-      "advisor": "",
+      "advisor": "Professor Tri Lai",
+      "start": "",
+      "end": "",
+      "highlights": [
+        "Applied Ciucu's Factorization Theorem to decompose tiling enumeration problems into tractable subproblems, working up through independent study of survey papers",
+        "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
+        "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
+      ],
+      "resume": true,
+      "dates": "Summer 2024"
+    },
+    {
+      "role": "Undergraduate Researcher - Quantum LDPC Codes",
+      "org": "University of Nebraska-Lincoln",
+      "location": "Lincoln, NE",
+      "advisor": "Professor Christine Kelley",
       "start": "",
       "end": "",
       "highlights": [],
+      "resume": true,
+      "dates": ""
+    },
+    {
+      "role": "Investigating the Flow of Opinions in a Diagonal Grid Graph Using a Modified Deffuant-Weisbuch Model",
+      "org": "University of Nebraska-Lincoln, Directed Reading Program",
+      "location": "Lincoln, NE",
+      "advisor": "Nick White",
+      "dates": "Fall 2024",
+      "start": "",
+      "end": "",
+      "highlights": [
+        "Extended the project beyond its initial reading goals by implementing a modified Deffuant-Weisbuch model in Python",
+        "Ran systematic parameter variation experiments showing that opinions invariably converge to consensus on diagonal grid graphs",
+        "Proved the discovered properties and identified future directions on alternative graph topologies"
+      ],
       "resume": true
     }
   ],
-  "papers": [],
+  "papers": [
+    {
+      "title": "",
+      "authors": [],
+      "venue": "",
+      "status": "preprint",
+      "year": "",
+      "links": {},
+      "resume": true
+    }
+  ],
   "projects": [
     {
       "name": "Poker Trainer",
@@ -182,6 +231,18 @@
           "code": "MATH 435",
           "grad": false,
           "resume": false
+        },
+        {
+          "name": "Algebra I",
+          "code": "",
+          "grad": true,
+          "resume": true
+        },
+        {
+          "name": "Coding Theory",
+          "code": "",
+          "grad": true,
+          "resume": true
         }
       ]
     },
@@ -217,21 +278,130 @@
           "code": "MATH 391",
           "grad": false,
           "resume": true
+        },
+        {
+          "name": "Generative AI",
+          "code": "",
+          "grad": false,
+          "resume": false
+        },
+        {
+          "name": "Computational Game Theory",
+          "code": "",
+          "grad": false,
+          "resume": false
         }
       ]
     }
   ],
-  "awards": [],
-  "talks": [],
-  "teaching": [],
+  "awards": [
+    {
+      "text": "D&F Eastman Scholarship",
+      "detail": "Mathematics Department recognition",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Regents Scholarship",
+      "detail": "",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Nebraska Career Scholarship",
+      "detail": "",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Dean's List",
+      "detail": "all semesters",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "University Honors Program",
+      "detail": "",
+      "year": "",
+      "resume": false
+    }
+  ],
+  "talks": [
+    {
+      "text": "Algorithms for the Sumset Recognition Problem",
+      "detail": "Harvey Mudd College REU Symposium",
+      "year": "2025"
+    },
+    {
+      "text": "Combinatorial Game Theory",
+      "detail": "UNL Directed Reading Program Symposium",
+      "year": "2025"
+    },
+    {
+      "text": "Mathematics at UNL",
+      "detail": "Marshall Recruitment Talk for High School Students",
+      "year": "2025"
+    },
+    {
+      "text": "The Modified Deffuant-Weisbuch Model",
+      "detail": "UNL Directed Reading Program Symposium",
+      "year": "2024"
+    },
+    {
+      "text": "Lozenge Tilings of a Hexagon with Holes",
+      "detail": "UNL Math Club",
+      "year": "2024"
+    }
+  ],
+  "teaching": [
+    {
+      "text": "Teaching Assistant, Calculus II",
+      "detail": "",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Learning Assistant, Analysis",
+      "detail": "",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Teaching Assistant, Honors Calculus II",
+      "detail": "",
+      "year": "",
+      "resume": true
+    },
+    {
+      "text": "Tap Dance Instructor",
+      "detail": "Chase the Spirit of Dance, Lincoln NE and Create 308, Grand Island NE (2018-2024)",
+      "year": "2024"
+    }
+  ],
   "skills": [
     {
       "area": "Languages",
-      "items": []
+      "items": [
+        "Python",
+        "MATLAB",
+        "Java",
+        "SQL",
+        "LaTeX"
+      ]
     },
     {
-      "area": "Tools",
-      "items": []
+      "area": "Libraries and tools",
+      "items": [
+        "NumPy",
+        "SciPy",
+        "Pandas",
+        "Matplotlib",
+        "scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "Git",
+        "Jupyter"
+      ]
     }
   ]
 }
