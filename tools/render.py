@@ -80,6 +80,7 @@ def research(rows, sep="--"):
 
 def papers(rows, self_name):
     out = []
+    rows = [p for p in rows if (p.get("title") or "").strip()]
     for p in sorted(rows, key=lambda p: str(p.get("year", "")), reverse=True):
         authors = ", ".join(
             r"\textbf{%s}" % esc(a) if a == self_name else esc(a)
@@ -97,6 +98,7 @@ def papers(rows, self_name):
 
 def projects(rows):
     out = []
+    rows = [pr for pr in rows if (pr.get("name") or "").strip()]
     for pr in sorted(rows, key=lambda p: str(p.get("year", "")), reverse=True):
         name = fill(pr.get("name"), "name")
         if pr.get("url"):

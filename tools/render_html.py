@@ -13,6 +13,7 @@ def _link(url, label):
 
 
 def papers(rows, self_name):
+    rows = [p for p in rows if (p.get("title") or "").strip()]
     if not rows:
         return IND + '<p class="muted small">nothing published yet...</p>'
 
@@ -49,6 +50,7 @@ def papers(rows, self_name):
 
 
 def projects(rows):
+    rows = [pr for pr in rows if (pr.get("name") or "").strip()]
     if not rows:
         return IND + '<p class="muted small">nothing here yet...</p>'
     out = []
