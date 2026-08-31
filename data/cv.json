@@ -12,7 +12,7 @@
   "education": [
     {
       "institution": "University of Nebraska-Lincoln",
-      "degree": "B.S. Mathematics and Computer Science",
+      "degree": "B.S. Mathematics and Data Science, Minor in Computer Science",
       "location": "Lincoln, NE",
       "start": "2023-05",
       "end": "2027-05",
@@ -40,9 +40,10 @@
       "location": "Raleigh, NC",
       "advisor": "Professor Chin Ho Lee",
       "start": "",
-      "end": "present",
+      "end": "",
       "highlights": [],
-      "resume": true
+      "resume": true,
+      "dates": "Summer 2026"
     },
     {
       "role": "Research Assistant — 3-uniform hypergraphic degree sequences, FPT algorithm feasibility",
@@ -52,7 +53,8 @@
       "start": "",
       "end": "",
       "highlights": [],
-      "resume": true
+      "resume": true,
+      "dates": "Spring 2026"
     },
     {
       "role": "Summer Researcher — algorithm design",
@@ -93,7 +95,7 @@
       "end": "",
       "highlights": [],
       "resume": true,
-      "dates": ""
+      "dates": "Fall 2026"
     },
     {
       "role": "Investigating the Flow of Opinions in a Diagonal Grid Graph Using a Modified Deffuant-Weisbuch Model",
