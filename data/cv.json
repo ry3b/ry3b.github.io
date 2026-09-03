@@ -41,7 +41,11 @@
       "advisor": "Professor Chin Ho Lee",
       "start": "",
       "end": "",
-      "highlights": [],
+      "highlights": [
+        "Worked through Ta-Shma's construction of epsilon-balanced codes and the surrounding literature as a research partner with Prof. Chin Ho Lee rather than in a supervised role",
+        "Developed simpler constructions of epsilon-balanced codes",
+        "Made minor improvements to the construction of Hsieh, Mohanty and Zheng"
+      ],
       "resume": true,
       "dates": "Summer 2026"
     },
@@ -115,12 +119,17 @@
   ],
   "papers": [
     {
-      "title": "",
-      "authors": [],
-      "venue": "",
+      "title": "Fixed-Parameter Tractability of t-Uniform Hypergraphicality",
+      "authors": [
+        "Riley Brown",
+        "Istvan Miklos"
+      ],
+      "venue": "arXiv preprint",
       "status": "preprint",
-      "year": "",
-      "links": {},
+      "year": "2026",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2606.08523"
+      },
       "resume": true
     }
   ],
@@ -236,13 +245,13 @@
         },
         {
           "name": "Algebra I",
-          "code": "",
+          "code": "MATH 817",
           "grad": true,
           "resume": true
         },
         {
           "name": "Coding Theory",
-          "code": "",
+          "code": "MATH 958",
           "grad": true,
           "resume": true
         }
@@ -283,13 +292,13 @@
         },
         {
           "name": "Generative AI",
-          "code": "",
+          "code": "CSCE 480H",
           "grad": false,
           "resume": false
         },
         {
           "name": "Computational Game Theory",
-          "code": "",
+          "code": "CSCE 422",
           "grad": false,
           "resume": false
         }

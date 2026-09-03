@@ -166,7 +166,9 @@ def keep(rows):
 
 def render_resume(data, style_name="ats"):
     p = data["profile"]
-    research_rows = [dict(r, role=plain(r.get("role"))) for r in keep(data.get("research", []))]
+    # advisors belong on the CV; an industry resume has no use for them
+    research_rows = [dict(r, role=plain(r.get("role")), advisor="")
+                     for r in keep(data.get("research", []))]
     head = r"\cvhead{%s}{%s}" % (fill(p.get("name"), "name"), contact(p))
     summary = [esc(p["resume_summary"])] if p.get("resume_summary") else []
     return document(style_name, head, [
