@@ -77,8 +77,10 @@ ATS = COMMON + r"""
 """
 
 DOCCLASS = r"\documentclass[11pt]{article}"
+# the resume runs a size smaller: it has to fit one page and be skimmed, not read
+DOCCLASS_RESUME = r"\documentclass[10pt]{article}"
 
 STYLES = {
     "times": {"preamble": DOCCLASS + TIMES},
-    "ats": {"preamble": DOCCLASS + ATS},
+    "ats": {"preamble": DOCCLASS_RESUME + ATS},
 }

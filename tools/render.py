@@ -51,7 +51,9 @@ def education(rows, sep="--"):
     for e in sorted(rows, key=sortkey, reverse=True):
         dates = esc(e["dates"]) if e.get("dates") else daterange(e.get("start"), e.get("end"), sep=sep)
         if e.get("expected"):
-            dates = "Expected " + dates
+            # "Expected" qualifies the end date, not the whole span
+            has_range = bool((e.get("start") and e.get("end")) or (e.get("dates") and sep in str(e.get("dates"))))
+            dates = dates + " (expected)" if has_range else "Expected " + dates
         out.append(entry(
             dates,
             fill(e.get("institution"), "institution"),

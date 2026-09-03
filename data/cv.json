@@ -87,7 +87,7 @@
         "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
         "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
       ],
-      "resume": true,
+      "resume": false,
       "dates": "Summer 2024"
     },
     {
@@ -114,7 +114,7 @@
         "Ran systematic parameter variation experiments showing that opinions invariably converge to consensus on diagonal grid graphs",
         "Proved the discovered properties and identified future directions on alternative graph topologies"
       ],
-      "resume": true
+      "resume": false
     }
   ],
   "papers": [
