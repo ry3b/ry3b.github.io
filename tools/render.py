@@ -189,7 +189,8 @@ def render_resume(data, style_name="ats"):
         ("Education", education(keep(data.get("education", [])), sep=" - ")),
         ("Preprints", papers(keep(data.get("papers", [])), p.get("name"))),
         ("Research Experience", research(research_rows, sep=" - ")),
-        ("Projects", projects(keep(data.get("projects", [])))),
+        # no URLs on the resume: the repos are on the GitHub profile in the header
+        ("Projects", projects([dict(pr, url="") for pr in keep(data.get("projects", []))])),
         ("Skills", skills(data.get("skills", []))),
         ("Relevant Coursework", coursework(data.get("coursework", []), resume_only=True)),
         ("Activities", activity_line(keep(data.get("activities", [])))),
