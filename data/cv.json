@@ -71,7 +71,7 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Improved exponential-time algorithms for sumset recognition, an NP-complete problem in additive combinatorics (team of four)",
+        "Improved exponential-time algorithms for sumset recognition, an NP-complete problem in additive combinatorics",
         "Sharpened branching strategies and base-case parameters for graph-theoretic reductions"
       ],
       "resume": true,
@@ -147,7 +147,7 @@
       "url": "",
       "blurb": "Parameter tuning and data analysis for Ocuvera to classify unattended hospital bed exits",
       "tech": "python, deep learning",
-      "year": "",
+      "year": "2025",
       "resume": true
     },
     {
@@ -420,13 +420,17 @@
   ],
   "skills": [
     {
-      "area": "Programming",
+      "area": "Programming and tools",
       "items": [
         "Python",
         "MATLAB",
         "Java",
         "SQL",
         "LaTeX",
+        "PyTorch",
+        "TensorFlow",
+        "LangChain",
+        "n8n",
         "Lean 4"
       ]
     }
