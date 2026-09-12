@@ -147,6 +147,14 @@ def skills(rows):
     return out
 
 
+def activity_line(rows):
+    """Resume form: everything on one line, the way coursework is rendered."""
+    if not rows:
+        return []
+    names = ", ".join(esc(r.get("text", "")) for r in rows if r.get("text"))
+    return [r"\plainline{%s}" % names]
+
+
 def section(title, blocks):
     blocks = [b for b in blocks if b.strip()]
     if not blocks:
@@ -184,6 +192,7 @@ def render_resume(data, style_name="ats"):
         ("Projects", projects(keep(data.get("projects", [])))),
         ("Skills", skills(data.get("skills", []))),
         ("Relevant Coursework", coursework(data.get("coursework", []), resume_only=True)),
+        ("Activities", activity_line(keep(data.get("activities", [])))),
     ])
 
 
@@ -197,6 +206,7 @@ def render(data, style_name):
         ("Awards and Honors", simple(data.get("awards", []))),
         ("Talks", simple(data.get("talks", []))),
         ("Teaching", simple(data.get("teaching", []))),
+        ("Activities", simple(data.get("activities", []))),
         ("Projects", projects(data.get("projects", []))),
         ("Selected Coursework", coursework(data.get("coursework", []))),
         ("Skills", skills(data.get("skills", []))),

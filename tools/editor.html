@@ -129,6 +129,12 @@ const SECTIONS = [
     blank:{text:'',detail:'',year:''},
     fields:[ {k:'text',t:T.text,req:1}, {k:'detail',t:T.text}, {k:'year',t:T.text} ] },
 
+  { key:'activities', label:'Activities', kind:'list', name:e=>e.text||'(new)',
+    hint:'Competitions, clubs, reading programs.',
+    blank:{text:'',detail:'',year:'',resume:true},
+    fields:[ {k:'text',t:T.text,req:1}, {k:'detail',t:T.text}, {k:'year',t:T.text},
+             {k:'resume',t:T.bool} ] },
+
   { key:'skills', label:'Skills', kind:'list', name:e=>e.area||'(new)',
     hint:'Resume only. Industry resumes get keyword-matched on this section.',
     blank:{area:'',items:[]},

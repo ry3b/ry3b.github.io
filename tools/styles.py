@@ -46,6 +46,7 @@ TIMES = COMMON + r"""
   \ifne{#3}{{\small\itshape #3}\par}%
   \ifne{#4}{{\small #4}\par}}
 \newcommand{\courseline}[2]{\par\vspace{4pt}\textbf{#1.} #2\par}
+\newcommand{\plainline}[1]{\par\vspace{4pt}#1\par}
 \newlist{cvbullets}{itemize}{1}
 \setlist[cvbullets]{leftmargin=1.3em,topsep=3pt,itemsep=1pt,parsep=0pt,label=\textendash}
 """
@@ -72,6 +73,7 @@ ATS = COMMON + r"""
   \par\vspace{5pt}%
   \textbf{#1}\par\ifne{#2}{{\small #2}\par}\ifne{#3}{{\small #3}\par}\ifne{#4}{{\small #4}\par}}
 \newcommand{\courseline}[2]{\par\vspace{3pt}{\small\textbf{#1}: #2}\par}
+\newcommand{\plainline}[1]{\par\vspace{3pt}{\small #1}\par}
 \newlist{cvbullets}{itemize}{1}
 \setlist[cvbullets]{leftmargin=1.2em,topsep=1pt,itemsep=0pt,parsep=0pt,label=\textbullet}
 """

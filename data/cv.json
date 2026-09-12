@@ -16,8 +16,7 @@
       "start": "2023-08",
       "end": "2027-05",
       "details": [
-        "GPA 3.92/4.00",
-        "University Honors Program"
+        "GPA 3.92/4.00, University Honors Program"
       ],
       "resume": true,
       "expected": true
@@ -41,24 +40,23 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Worked through Ta-Shma's epsilon-balanced code construction and the surrounding literature as a research partner with Prof. Chin Ho Lee",
-        "Found simpler constructions of epsilon-balanced codes and minor improvements to the Hsieh-Mohanty-Zheng construction"
+        "Studied Ta-Shma's epsilon-balanced code construction with Prof. Chin Ho Lee as a research partner",
+        "Found simpler constructions and minor improvements to the Hsieh-Mohanty-Zheng construction"
       ],
       "resume": true,
       "dates": "Summer 2026",
       "resume_brief": false
     },
     {
-      "role": "Research Assistant — 3-uniform hypergraphic degree sequences, FPT algorithm feasibility",
+      "role": "Research Assistant, t-uniform hypergraph degree sequences and FPT algorithms",
       "org": "Budapest Semesters in Mathematics",
       "location": "Budapest, Hungary",
       "advisor": "Professor Istvan Miklos",
       "start": "",
       "end": "",
       "highlights": [
-        "Proved t-uniform hypergraphicality is fixed-parameter tractable in (k, t) for compressed degree sequences, extending known bounded-range results",
-        "Reduced realizability to integer programming feasibility via a bounded-dimension spectrum representation and balancing hinge-flips",
-        "Co-authored the resulting preprint, arXiv:2606.08523"
+        "Proved t-uniform hypergraphicality is FPT in (k, t) for compressed degree sequences, extending known bounded-range results",
+        "Reduced realizability to integer programming feasibility via bounded-dimension spectra and balancing hinge-flips"
       ],
       "resume": true,
       "dates": "Spring 2026",
@@ -72,8 +70,8 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Analyzed and improved exponential-time algorithms for sumset recognition, an NP-complete problem in additive combinatorics, with a team of four",
-        "Improved branching strategies and base-case parameters for graph-theoretic reductions"
+        "Improved exponential-time algorithms for sumset recognition, an NP-complete problem in additive combinatorics (team of four)",
+        "Sharpened branching strategies and base-case parameters for graph-theoretic reductions"
       ],
       "resume": true,
       "dates": "Summer 2025",
@@ -91,7 +89,7 @@
         "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
         "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
       ],
-      "resume": true,
+      "resume": false,
       "dates": "Summer 2024",
       "resume_brief": true
     },
@@ -102,7 +100,9 @@
       "advisor": "Professor Christine Kelley",
       "start": "",
       "end": "",
-      "highlights": [],
+      "highlights": [
+        "Testing whether collision-free geodesic-flow operators on Ramanujan complexes can sharpen iterative-decoder thresholds for quantum LDPC codes"
+      ],
       "resume": true,
       "dates": "Fall 2026",
       "resume_brief": false
@@ -142,6 +142,14 @@
   ],
   "projects": [
     {
+      "name": "leanverify",
+      "url": "https://github.com/ry3b/leanverify",
+      "blurb": "Verification kernel for an LLM-driven proof loop: checks a Lean 4 proof against Mathlib, rejecting sorries and smuggled axioms",
+      "tech": "python, lean 4",
+      "year": "2026",
+      "resume": true
+    },
+    {
       "name": "Poker Trainer",
       "url": "",
       "blurb": "A terminal and Tkinter drill trainer for poker skills: pot odds, combos, equity, bet sizing, push/fold and ICM, with an adaptive scheduler that weights drills by weakness and staleness.",
@@ -158,25 +166,25 @@
           "name": "Bijective Partition Theory",
           "code": "MATH 958",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Discrete Mathematics",
           "code": "MATH 850",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Matroid Theory",
           "code": "BSM/ELTE",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Advanced Combinatorics",
           "code": "BSM CO2",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Conjecture and Proof",
@@ -194,7 +202,7 @@
           "name": "Graph Theory",
           "code": "MATH 452",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Group Theory",
@@ -254,13 +262,13 @@
           "name": "Algebra I",
           "code": "MATH 817",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Coding Theory",
           "code": "MATH 958",
           "grad": true,
-          "resume": true
+          "resume": false
         }
       ]
     },
@@ -271,19 +279,19 @@
           "name": "Development and Analysis of Algorithms",
           "code": "CSCE 923",
           "grad": true,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Automata, Computation, and Language",
           "code": "CSCE 428",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Data Structures and Algorithms",
           "code": "CSCE 310",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Data Analysis",
@@ -419,6 +427,32 @@
         "SQL",
         "LaTeX"
       ]
+    }
+  ],
+  "activities": [
+    {
+      "text": "Putnam Exam Practice",
+      "detail": "University of Nebraska-Lincoln",
+      "year": "2024",
+      "resume": true
+    },
+    {
+      "text": "Quiz Bowl Club",
+      "detail": "literature, modern art, mathematics, computer science",
+      "year": "2024",
+      "resume": true
+    },
+    {
+      "text": "Directed Reading Program",
+      "detail": "combinatorial game theory with Noah Walker",
+      "year": "2024",
+      "resume": true
+    },
+    {
+      "text": "Math Club",
+      "detail": "University of Nebraska-Lincoln",
+      "year": "2023",
+      "resume": false
     }
   ]
 }
