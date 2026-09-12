@@ -5,7 +5,6 @@
     "email_school": "rbrown71@nebraska.edu",
     "site": "ry3b.github.io",
     "github": "ry3b",
-    "phone": "531-333-1615",
     "location": "Lincoln, NE",
     "resume_summary": ""
   },
@@ -365,6 +364,11 @@
     }
   ],
   "teaching": [
+    {
+      "text": "Teaching Assistant, Calculus I",
+      "detail": "University of Nebraska-Lincoln",
+      "year": "2025"
+    },
     {
       "text": "Teaching Assistant, Calculus II",
       "detail": "",
