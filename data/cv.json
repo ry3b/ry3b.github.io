@@ -28,7 +28,7 @@
       "start": "2026-01",
       "end": "2026-06",
       "details": [],
-      "resume": true
+      "resume": false
     }
   ],
   "research": [
@@ -144,7 +144,7 @@
     {
       "name": "leanverify",
       "url": "https://github.com/ry3b/leanverify",
-      "blurb": "Verification kernel for an LLM-driven proof loop: checks a Lean 4 proof against Mathlib, rejecting sorries and smuggled axioms",
+      "blurb": "Lean 4 proof checker against Mathlib: rejects sorries and smuggled axioms",
       "tech": "python, lean 4",
       "year": "2026",
       "resume": true
@@ -166,25 +166,25 @@
           "name": "Bijective Partition Theory",
           "code": "MATH 958",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Discrete Mathematics",
           "code": "MATH 850",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Matroid Theory",
           "code": "BSM/ELTE",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Advanced Combinatorics",
           "code": "BSM CO2",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Conjecture and Proof",
@@ -262,13 +262,13 @@
           "name": "Algebra I",
           "code": "MATH 817",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Coding Theory",
           "code": "MATH 958",
           "grad": true,
-          "resume": false
+          "resume": true
         }
       ]
     },
@@ -279,7 +279,7 @@
           "name": "Development and Analysis of Algorithms",
           "code": "CSCE 923",
           "grad": true,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Automata, Computation, and Language",
@@ -417,19 +417,27 @@
         "LLM-assisted proof search",
         "agentic research harnesses"
       ]
-    },
-    {
-      "area": "Languages",
-      "items": [
-        "Python",
-        "MATLAB",
-        "Java",
-        "SQL",
-        "LaTeX"
-      ]
     }
   ],
   "activities": [
+    {
+      "text": "President, Pi Mu Epsilon",
+      "detail": "University of Nebraska-Lincoln",
+      "year": "2026",
+      "resume": true
+    },
+    {
+      "text": "President, Math Club",
+      "detail": "University of Nebraska-Lincoln",
+      "year": "2026",
+      "resume": true
+    },
+    {
+      "text": "Directed Reading Program (combinatorial game theory)",
+      "detail": "with Noah Walker",
+      "year": "2024",
+      "resume": true
+    },
     {
       "text": "Putnam Exam Practice",
       "detail": "University of Nebraska-Lincoln",
@@ -443,16 +451,10 @@
       "resume": true
     },
     {
-      "text": "Directed Reading Program",
-      "detail": "combinatorial game theory with Noah Walker",
+      "text": "Poker Club",
+      "detail": "University of Nebraska-Lincoln",
       "year": "2024",
       "resume": true
-    },
-    {
-      "text": "Math Club",
-      "detail": "University of Nebraska-Lincoln",
-      "year": "2023",
-      "resume": false
     }
   ]
 }

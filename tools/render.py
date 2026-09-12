@@ -147,11 +147,18 @@ def skills(rows):
     return out
 
 
+def coursework_line(areas):
+    """Resume form: every flagged course on one line, no per-area labels."""
+    names = [esc(c["name"]) for a in areas for c in a.get("courses", []) if c.get("resume")]
+    return [r"\plainline{%s}" % ", ".join(names)] if names else []
+
+
 def activity_line(rows):
     """Resume form: everything on one line, the way coursework is rendered."""
     if not rows:
         return []
-    names = ", ".join(esc(r.get("text", "")) for r in rows if r.get("text"))
+    # semicolons: the entries themselves contain commas ("President, Math Club")
+    names = "; ".join(esc(r.get("text", "")) for r in rows if r.get("text"))
     return [r"\plainline{%s}" % names]
 
 
@@ -192,7 +199,7 @@ def render_resume(data, style_name="ats"):
         # no URLs on the resume: the repos are on the GitHub profile in the header
         ("Projects", projects([dict(pr, url="") for pr in keep(data.get("projects", []))])),
         ("Skills", skills(data.get("skills", []))),
-        ("Relevant Coursework", coursework(data.get("coursework", []), resume_only=True)),
+        ("Graduate Coursework", coursework_line(data.get("coursework", []))),
         ("Activities", activity_line(keep(data.get("activities", [])))),
     ])
 
