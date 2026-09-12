@@ -149,7 +149,10 @@ def skills(rows):
 
 def coursework_line(areas):
     """Resume form: every flagged course on one line, no per-area labels."""
-    names = [esc(c["name"]) for a in areas for c in a.get("courses", []) if c.get("resume")]
+    picked = [c for a in areas for c in a.get("courses", []) if c.get("resume")]
+    grad = [r"\textbf{%s}" % esc(c["name"]) for c in picked if c.get("grad")]
+    rest = [esc(c["name"]) for c in picked if not c.get("grad")]
+    names = grad + rest
     return [r"\plainline{%s}" % ", ".join(names)] if names else []
 
 
@@ -194,12 +197,13 @@ def render_resume(data, style_name="ats"):
     return document(style_name, head, [
         ("Summary", summary),
         ("Education", education(keep(data.get("education", [])), sep=" - ")),
-        ("Preprints", papers(keep(data.get("papers", [])), p.get("name"))),
+        # the arXiv id lives in the venue line here; a separate links line costs a row
+        ("Preprints", papers([dict(pr, links={}) for pr in keep(data.get("papers", []))], p.get("name"))),
         ("Research Experience", research(research_rows, sep=" - ")),
         # no URLs on the resume: the repos are on the GitHub profile in the header
         ("Projects", projects([dict(pr, url="") for pr in keep(data.get("projects", []))])),
         ("Skills", skills(data.get("skills", []))),
-        ("Graduate Coursework", coursework_line(data.get("coursework", []))),
+        ("Relevant Coursework", coursework_line(data.get("coursework", []))),
         ("Activities", activity_line(keep(data.get("activities", [])))),
     ])
 

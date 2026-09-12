@@ -16,7 +16,8 @@
       "start": "2023-08",
       "end": "2027-05",
       "details": [
-        "GPA 3.92/4.00, University Honors Program"
+        "GPA 3.92/4.00, University Honors Program",
+        "President of Pi Mu Epsilon and Math Club; Putnam Exam Practice"
       ],
       "resume": true,
       "expected": true
@@ -89,7 +90,7 @@
         "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
         "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
       ],
-      "resume": false,
+      "resume": true,
       "dates": "Summer 2024",
       "resume_brief": true
     },
@@ -131,7 +132,7 @@
         "Riley Brown",
         "Istvan Miklos"
       ],
-      "venue": "arXiv preprint",
+      "venue": "arXiv:2606.08523",
       "status": "preprint",
       "year": "2026",
       "links": {
@@ -141,6 +142,14 @@
     }
   ],
   "projects": [
+    {
+      "name": "Deep learning for patient-safety monitoring",
+      "url": "",
+      "blurb": "Parameter tuning and data analysis for Ocuvera to classify unattended hospital bed exits",
+      "tech": "python, deep learning",
+      "year": "",
+      "resume": true
+    },
     {
       "name": "leanverify",
       "url": "https://github.com/ry3b/leanverify",
@@ -202,7 +211,7 @@
           "name": "Graph Theory",
           "code": "MATH 452",
           "grad": false,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Group Theory",
@@ -214,7 +223,7 @@
           "name": "Probability Theory",
           "code": "MATH 487",
           "grad": false,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Stochastic Processes",
@@ -285,13 +294,13 @@
           "name": "Automata, Computation, and Language",
           "code": "CSCE 428",
           "grad": false,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Data Structures and Algorithms",
           "code": "CSCE 310",
           "grad": false,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Data Analysis",
@@ -411,11 +420,14 @@
   ],
   "skills": [
     {
-      "area": "AI for mathematics",
+      "area": "Programming",
       "items": [
-        "Lean 4 and Mathlib verification tooling",
-        "LLM-assisted proof search",
-        "agentic research harnesses"
+        "Python",
+        "MATLAB",
+        "Java",
+        "SQL",
+        "LaTeX",
+        "Lean 4"
       ]
     }
   ],
@@ -424,37 +436,37 @@
       "text": "President, Pi Mu Epsilon",
       "detail": "University of Nebraska-Lincoln",
       "year": "2026",
-      "resume": true
+      "resume": false
     },
     {
       "text": "President, Math Club",
       "detail": "University of Nebraska-Lincoln",
       "year": "2026",
-      "resume": true
+      "resume": false
     },
     {
-      "text": "Directed Reading Program (combinatorial game theory)",
+      "text": "Directed Reading Program (combinatorial game theory, measure-theoretic probability, opinion dynamics)",
       "detail": "with Noah Walker",
       "year": "2024",
-      "resume": true
+      "resume": false
     },
     {
       "text": "Putnam Exam Practice",
       "detail": "University of Nebraska-Lincoln",
       "year": "2024",
-      "resume": true
+      "resume": false
     },
     {
       "text": "Quiz Bowl Club",
       "detail": "literature, modern art, mathematics, computer science",
       "year": "2024",
-      "resume": true
+      "resume": false
     },
     {
       "text": "Poker Club",
       "detail": "University of Nebraska-Lincoln",
       "year": "2024",
-      "resume": true
+      "resume": false
     }
   ]
 }
