@@ -57,7 +57,7 @@ ATS = COMMON + r"""
 \usepackage[margin=0.8in]{geometry}
 \usepackage{newtxtext}
 \titleformat{\section}{\normalfont\bfseries\normalsize}{}{0em}{\MakeUppercase}[\vspace{-8pt}\rule{\textwidth}{0.4pt}]
-\titlespacing*{\section}{0pt}{13pt}{6pt}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 \renewcommand{\contactsep}{\ \textbar\ }
 \newcommand{\cvhead}[2]{%
   \begin{center}
@@ -65,7 +65,7 @@ ATS = COMMON + r"""
     {\small #2}
   \end{center}\vspace{1pt}}
 \newcommand{\cventry}[4]{%
-  \par\vspace{5pt}%
+  \par\vspace{4pt}%
   \textbf{#2}\par
   \ifne{#3#4#1}{{\small #3\ifne{#4}{, #4}\ifne{#1}{ \textbar{} #1}}\par}}
 \newcommand{\cvpaper}[4]{%
@@ -73,7 +73,7 @@ ATS = COMMON + r"""
   \textbf{#1}\par\ifne{#2}{{\small #2}\par}\ifne{#3}{{\small #3}\par}\ifne{#4}{{\small #4}\par}}
 \newcommand{\courseline}[2]{\par\vspace{3pt}{\small\textbf{#1}: #2}\par}
 \newlist{cvbullets}{itemize}{1}
-\setlist[cvbullets]{leftmargin=1.2em,topsep=2pt,itemsep=1pt,parsep=0pt,label=\textbullet}
+\setlist[cvbullets]{leftmargin=1.2em,topsep=1pt,itemsep=0pt,parsep=0pt,label=\textbullet}
 """
 
 DOCCLASS = r"\documentclass[11pt]{article}"

@@ -168,15 +168,19 @@ def keep(rows):
 
 def render_resume(data, style_name="ats"):
     p = data["profile"]
-    # advisors belong on the CV; an industry resume has no use for them
-    research_rows = [dict(r, role=plain(r.get("role")), advisor="")
+    # advisors belong on the CV; a resume has no use for them.
+    # resume_brief entries appear as a title line only -- recent work gets the
+    # bullets, older work still gets counted.
+    research_rows = [dict(r, role=plain(r.get("role")), advisor="",
+                          highlights=[] if r.get("resume_brief") else r.get("highlights"))
                      for r in keep(data.get("research", []))]
     head = r"\cvhead{%s}{%s}" % (fill(p.get("name"), "name"), contact(p))
     summary = [esc(p["resume_summary"])] if p.get("resume_summary") else []
     return document(style_name, head, [
         ("Summary", summary),
         ("Education", education(keep(data.get("education", [])), sep=" - ")),
-        ("Experience", research(research_rows, sep=" - ")),
+        ("Preprints", papers(keep(data.get("papers", [])), p.get("name"))),
+        ("Research Experience", research(research_rows, sep=" - ")),
         ("Projects", projects(keep(data.get("projects", [])))),
         ("Skills", skills(data.get("skills", []))),
         ("Relevant Coursework", coursework(data.get("coursework", []), resume_only=True)),

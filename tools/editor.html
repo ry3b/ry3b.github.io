@@ -97,7 +97,8 @@ const SECTIONS = [
              {k:'dates',t:T.text,hint:'free text like "Summer 2025"; overrides start/end'},
              {k:'start',t:T.text,hint:'YYYY-MM'}, {k:'end',t:T.text,hint:'YYYY-MM or present'},
              {k:'highlights',t:T.lines,wide:1,hint:'one bullet per line'},
-             {k:'resume',t:T.bool} ] },
+             {k:'resume',t:T.bool},
+             {k:'resume_brief',t:T.bool,hint:'on the resume, show the title only (no bullets)'} ] },
 
   { key:'papers', label:'Papers', kind:'list', name:e=>e.title||'(new)',
     hint:'Feeds the CV and the papers page.',

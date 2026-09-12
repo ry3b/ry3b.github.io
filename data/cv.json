@@ -13,7 +13,7 @@
       "institution": "University of Nebraska-Lincoln",
       "degree": "B.S. Mathematics and Data Science, Minor in Computer Science",
       "location": "Lincoln, NE",
-      "start": "2023-05",
+      "start": "2023-08",
       "end": "2027-05",
       "details": [
         "GPA 3.92/4.00",
@@ -41,12 +41,12 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Worked through Ta-Shma's construction of epsilon-balanced codes and the surrounding literature as a research partner with Prof. Chin Ho Lee rather than in a supervised role",
-        "Developed simpler constructions of epsilon-balanced codes",
-        "Made minor improvements to the construction of Hsieh, Mohanty and Zheng"
+        "Worked through Ta-Shma's epsilon-balanced code construction and the surrounding literature as a research partner with Prof. Chin Ho Lee",
+        "Found simpler constructions of epsilon-balanced codes and minor improvements to the Hsieh-Mohanty-Zheng construction"
       ],
       "resume": true,
-      "dates": "Summer 2026"
+      "dates": "Summer 2026",
+      "resume_brief": false
     },
     {
       "role": "Research Assistant — 3-uniform hypergraphic degree sequences, FPT algorithm feasibility",
@@ -55,9 +55,14 @@
       "advisor": "Professor Istvan Miklos",
       "start": "",
       "end": "",
-      "highlights": [],
+      "highlights": [
+        "Proved t-uniform hypergraphicality is fixed-parameter tractable in (k, t) for compressed degree sequences, extending known bounded-range results",
+        "Reduced realizability to integer programming feasibility via a bounded-dimension spectrum representation and balancing hinge-flips",
+        "Co-authored the resulting preprint, arXiv:2606.08523"
+      ],
       "resume": true,
-      "dates": "Spring 2026"
+      "dates": "Spring 2026",
+      "resume_brief": false
     },
     {
       "role": "Summer Researcher — algorithm design",
@@ -67,12 +72,12 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Collaborated with a team of four students to analyze and improve exponential-time algorithms for the sumset recognition problem, an NP-complete problem in additive combinatorics",
-        "Enhanced branching approaches and refined base case parameters for graph-theoretic reduction methods through systematic analysis of algorithmic complexity",
-        "Presented findings at the REU symposium and continued independent exploration of the problem space"
+        "Analyzed and improved exponential-time algorithms for sumset recognition, an NP-complete problem in additive combinatorics, with a team of four",
+        "Improved branching strategies and base-case parameters for graph-theoretic reductions"
       ],
       "resume": true,
-      "dates": "Summer 2025"
+      "dates": "Summer 2025",
+      "resume_brief": false
     },
     {
       "role": "Undergraduate Researcher — tiling theory",
@@ -86,8 +91,9 @@
         "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
         "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
       ],
-      "resume": false,
-      "dates": "Summer 2024"
+      "resume": true,
+      "dates": "Summer 2024",
+      "resume_brief": true
     },
     {
       "role": "Undergraduate Researcher - Quantum LDPC Codes",
@@ -98,7 +104,8 @@
       "end": "",
       "highlights": [],
       "resume": true,
-      "dates": "Fall 2026"
+      "dates": "Fall 2026",
+      "resume_brief": false
     },
     {
       "role": "Investigating the Flow of Opinions in a Diagonal Grid Graph Using a Modified Deffuant-Weisbuch Model",
@@ -113,7 +120,8 @@
         "Ran systematic parameter variation experiments showing that opinions invariably converge to consensus on diagonal grid graphs",
         "Proved the discovered properties and identified future directions on alternative graph topologies"
       ],
-      "resume": false
+      "resume": false,
+      "resume_brief": true
     }
   ],
   "papers": [
@@ -139,7 +147,7 @@
       "blurb": "A terminal and Tkinter drill trainer for poker skills: pot odds, combos, equity, bet sizing, push/fold and ICM, with an adaptive scheduler that weights drills by weakness and staleness.",
       "tech": "python",
       "year": "2026",
-      "resume": true
+      "resume": false
     }
   ],
   "coursework": [
@@ -198,7 +206,7 @@
           "name": "Probability Theory",
           "code": "MATH 487",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Stochastic Processes",
@@ -222,7 +230,7 @@
           "name": "Linear Algebra",
           "code": "MATH 314",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Differential Equations",
@@ -281,13 +289,13 @@
           "name": "Data Analysis",
           "code": "CSCE 320",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Math for Machine Learning",
           "code": "MATH 391",
           "grad": false,
-          "resume": true
+          "resume": false
         },
         {
           "name": "Generative AI",
@@ -395,6 +403,14 @@
   ],
   "skills": [
     {
+      "area": "AI for mathematics",
+      "items": [
+        "Lean 4 and Mathlib verification tooling",
+        "LLM-assisted proof search",
+        "agentic research harnesses"
+      ]
+    },
+    {
       "area": "Languages",
       "items": [
         "Python",
@@ -402,20 +418,6 @@
         "Java",
         "SQL",
         "LaTeX"
-      ]
-    },
-    {
-      "area": "Libraries and tools",
-      "items": [
-        "NumPy",
-        "SciPy",
-        "Pandas",
-        "Matplotlib",
-        "scikit-learn",
-        "PyTorch",
-        "TensorFlow",
-        "Git",
-        "Jupyter"
       ]
     }
   ]
