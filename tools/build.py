@@ -8,6 +8,7 @@
 Style per document is set below; both read the same data.
 """
 import argparse
+import glob
 import json
 import os
 import re
@@ -109,6 +110,30 @@ if __name__ == "__main__":
             print("built %s (%s style, %d page%s)%s"
                   % (name, style, pages, "" if pages == 1 else "s", note))
 
+    for post in render_html.live(data.get("posts", [])):
+        target = os.path.join(ROOT, "blog", "%s.html" % post["slug"])
+        html = render_html.post_page(post, data["profile"].get("name", ""))
+        before = open(target).read() if os.path.exists(target) else None
+        if before != html:
+            with open(target, "w") as fh:
+                fh.write(html)
+            print("blog/%s.html (written)" % post["slug"])
+    # a post removed from the data must not stay live: delete the pages we
+    # generated (they carry the marker) whose slug is no longer published.
+    published = {p_["slug"] for p_ in render_html.live(data.get("posts", []))}
+    for path in sorted(glob.glob(os.path.join(ROOT, "blog", "*.html"))):
+        name = os.path.basename(path)
+        if name == "index.html" or name[:-5] in published:
+            continue
+        if "generated from data/cv.json" in open(path).read():
+            os.remove(path)
+            print("blog/%s (removed: no longer in the data)" % name)
+
+    drafts = [p_ for p_ in data.get("posts", []) if p_.get("draft")]
+    if drafts:
+        print("%d draft post%s not published" % (len(drafts), "" if len(drafts) == 1 else "s"))
+
+    print(page("blog/index.html", "posts", render_html.post_index(data.get("posts", []))))
     print(page("papers/index.html", "papers",
                render_html.papers(data.get("papers", []), data["profile"].get("name"))))
     print(page("projects/index.html", "projects", render_html.projects(data.get("projects", []))))

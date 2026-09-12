@@ -473,5 +473,15 @@
       "year": "2024",
       "resume": false
     }
+  ],
+  "posts": [
+    {
+      "title": "why do i even have a blog",
+      "slug": "welcome",
+      "date": "2026-06",
+      "description": "Why I even have a blog — Riley Brown.",
+      "body": "<p>\n            I don't want you to think that I think\n        </p>",
+      "draft": false
+    }
   ]
 }

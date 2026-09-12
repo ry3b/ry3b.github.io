@@ -86,3 +86,69 @@ def coursework(areas):
                            % (e(c.get("name", "")), e(c.get("code", ""))))
         out.append(IND + "</ul>")
     return "\n".join(out)
+
+
+MONTHS = ["", "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"]
+
+
+def month_name(stamp):
+    """'2026-06' -> 'June 2026'. Anything else is passed through."""
+    parts = (stamp or "").split("-")
+    if len(parts) == 2 and parts[1].isdigit() and 1 <= int(parts[1]) <= 12:
+        return "%s %s" % (MONTHS[int(parts[1])], parts[0])
+    return e(stamp or "")
+
+
+def live(posts):
+    """Published posts, newest first. Dates are YYYY-MM, so a string sort works."""
+    return sorted([p for p in posts if not p.get("draft") and p.get("slug")],
+                  key=lambda p: p.get("date", ""), reverse=True)
+
+
+def post_index(posts):
+    rows = live(posts)
+    if not rows:
+        return IND + '<p class="muted small">nothing written yet...</p>'
+    out = [IND + '<ul class="posts">']
+    for p in rows:
+        out.append(IND * 2 + "<li>")
+        out.append(IND * 3 + '<span class="date">%s</span>' % month_name(p.get("date")))
+        out.append(IND * 3 + '<a class="post-title" href="%s.html">%s</a>'
+                   % (e(p["slug"]), e(p.get("title", ""))))
+        out.append(IND * 2 + "</li>")
+    out.append(IND + "</ul>")
+    return "\n".join(out)
+
+
+def post_page(post, name):
+    """A whole post page. The body is the author's raw HTML, passed through."""
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{description}">
+    <title>{title} &mdash; {name}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <a class="back" href="/blog">&larr; blog</a>
+
+    <!-- generated from data/cv.json by tools/build.py; edit the post there -->
+    <article class="prose">
+        <h1>{title}</h1>
+        <p class="muted small" style="margin-top:-2px">{date}</p>
+
+        {body}
+
+    </article>
+
+</body>
+</html>
+""".format(description=e(post.get("description") or post.get("title", "")),
+           title=e(post.get("title", "")),
+           name=e(name.lower()),
+           date=month_name(post.get("date")),
+           body=post.get("body", "").strip())

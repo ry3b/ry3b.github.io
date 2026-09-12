@@ -34,6 +34,7 @@
     padding:5px 7px; border:1px solid var(--line); background:#fff; }
   input:focus, textarea:focus, select:focus { outline:2px solid var(--link); outline-offset:-1px; }
   textarea { min-height:62px; resize:vertical; }
+  textarea.tall { min-height:340px; font:13px ui-monospace, Menlo, monospace; }
   .wide { grid-column:1/-1; }
   .check { display:flex; align-items:center; gap:7px; font-size:13px; color:#000; }
   .check input { margin:0; }
@@ -129,6 +130,16 @@ const SECTIONS = [
     blank:{text:'',detail:'',year:''},
     fields:[ {k:'text',t:T.text,req:1}, {k:'detail',t:T.text}, {k:'year',t:T.text} ] },
 
+  { key:'posts', label:'Blog', addLabel:'post', kind:'list', name:e=>e.title||'(new)',
+    hint:'Body is raw HTML, so you keep full control of the markup. Save & build writes blog/<slug>.html.',
+    blank:{title:'',slug:'',date:'',description:'',body:'',draft:true},
+    fields:[ {k:'title',t:T.text,req:1,wide:1},
+             {k:'slug',t:T.text,req:1,hint:'url: /blog/<slug>.html; letters, digits and dashes'},
+             {k:'date',t:T.text,hint:'YYYY-MM'},
+             {k:'description',t:T.text,wide:1,hint:'one line, used as the page meta description'},
+             {k:'body',t:T.area,wide:1,tall:1,hint:'raw HTML: <p>, <h2>, <ul><li>, <a href>, <em>, <strong>'},
+             {k:'draft',t:T.bool,hint:'drafts are not listed and no page is written'} ] },
+
   { key:'activities', label:'Activities', kind:'list', name:e=>e.text||'(new)',
     hint:'Competitions, clubs, reading programs.',
     blank:{text:'',detail:'',year:'',resume:true},
@@ -178,6 +189,7 @@ function input(obj, f) {
   let node;
   if (f.t === T.area || f.t === T.lines) {
     node = el('textarea', { value: f.t === T.lines ? (obj[f.k] || []).join('\n') : (obj[f.k] || '') });
+    if (f.tall) node.className = 'tall';
     node.oninput = () => {
       obj[f.k] = f.t === T.lines
         ? node.value.split('\n').map(s => s.trim()).filter(Boolean)
@@ -293,7 +305,7 @@ function render() {
   } else {
     const list = data[spec.key] || (data[spec.key] = []);
     list.forEach((_, i) => main.append(entryCard(spec, list, i)));
-    const add = el('button', { className: 'rowbtn', textContent: '+ add ' + spec.label.toLowerCase(), type: 'button' });
+    const add = el('button', { className: 'rowbtn', textContent: '+ add ' + (spec.addLabel || spec.label.toLowerCase()), type: 'button' });
     add.onclick = () => { list.push(structuredClone(spec.blank)); touch(); render(); };
     main.append(add);
   }
