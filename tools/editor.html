@@ -137,7 +137,7 @@ const SECTIONS = [
              {k:'slug',t:T.text,req:1,hint:'url: /blog/<slug>.html; letters, digits and dashes'},
              {k:'date',t:T.text,hint:'YYYY-MM'},
              {k:'description',t:T.text,wide:1,hint:'one line, used as the page meta description'},
-             {k:'body',t:T.area,wide:1,tall:1,hint:'raw HTML: <p>, <h2>, <ul><li>, <a href>, <em>, <strong>'},
+             {k:'body',t:T.area,wide:1,tall:1,hint:"HTML: <p>, <h2>, <ul><li>, <a href>, <em>, <strong>; a blank line inside a <p> starts a new paragraph"},
              {k:'draft',t:T.bool,hint:'drafts are not listed and no page is written'} ] },
 
   { key:'activities', label:'Activities', kind:'list', name:e=>e.text||'(new)',

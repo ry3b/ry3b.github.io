@@ -3,6 +3,8 @@
 Output matches the markup already used on those pages (.paper, .courses),
 so the hand-written CSS keeps working untouched.
 """
+import re
+
 from html import escape as e
 
 IND = " " * 4
@@ -121,8 +123,19 @@ def post_index(posts):
     return "\n".join(out)
 
 
+def paragraphs(body):
+    """Blank lines inside a <p> become paragraph breaks, so a post typed as
+    plain text with a blank line between paragraphs renders the way it was
+    written. Everything else in the body is left alone."""
+    def split(m):
+        parts = [s.strip() for s in re.split(r"\n\s*\n", m.group(1)) if s.strip()]
+        return "\n\n".join("<p>%s</p>" % s for s in parts)
+    return re.sub(r"<p>(.*?)</p>", split, body, flags=re.S)
+
+
 def post_page(post, name):
-    """A whole post page. The body is the author's raw HTML, passed through."""
+    """A whole post page. The body is the author's HTML, passed through except
+    that blank lines inside a <p> split it into paragraphs."""
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,4 +164,4 @@ def post_page(post, name):
            title=e(post.get("title", "")),
            name=e(name.lower()),
            date=month_name(post.get("date")),
-           body=post.get("body", "").strip())
+           body=paragraphs(post.get("body", "").strip()))
