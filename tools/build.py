@@ -47,6 +47,9 @@ def check(data):
             gaps.append("research: %s has no bullets (the resume leans on these)" % r.get("org", "?"))
     if not any(s.get("items") for s in data.get("skills", [])):
         gaps.append("skills: empty, so the section is hidden on the resume")
+    for p_ in data.get("posts", []):
+        if not p_.get("draft") and not p_.get("slug"):
+            gaps.append("posts: %r has no slug, so it is not published" % p_.get("title", "?"))
     return gaps
 
 
@@ -132,6 +135,9 @@ if __name__ == "__main__":
     drafts = [p_ for p_ in data.get("posts", []) if p_.get("draft")]
     if drafts:
         print("%d draft post%s not published" % (len(drafts), "" if len(drafts) == 1 else "s"))
+    for p_ in data.get("posts", []):
+        if not p_.get("draft") and not p_.get("slug"):
+            print("WARNING: post %r has no slug and was not published" % p_.get("title", "?"))
 
     print(page("blog/index.html", "posts", render_html.post_index(data.get("posts", []))))
     print(page("papers/index.html", "papers",
