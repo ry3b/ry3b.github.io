@@ -55,18 +55,22 @@ TIMES = COMMON + r"""
 # way a person does. No minipages, no tabulars, no right-aligned columns --
 # pdftotext detaches all of those from their entry.
 ATS = COMMON + r"""
-\usepackage[margin=0.8in]{geometry}
+\usepackage[top=0.5in,bottom=0.5in,left=0.65in,right=0.65in]{geometry}
 \usepackage{newtxtext}
-\titleformat{\section}{\normalfont\bfseries\normalsize}{}{0em}{\MakeUppercase}[\vspace{-8pt}\rule{\textwidth}{0.4pt}]
-\titlespacing*{\section}{0pt}{9pt}{4pt}
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{9.5}{11.2}}
+\renewcommand\small{\@setfontsize\small{8.8}{10.3}}
+\makeatother
+\titleformat{\section}{\normalfont\bfseries\normalsize}{}{0em}{\MakeUppercase}[\vspace{-9pt}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{7pt}{2pt}
 \renewcommand{\contactsep}{\ \textbar\ }
 \newcommand{\cvhead}[2]{%
   \begin{center}
-    {\LARGE\bfseries #1}\\[4pt]
+    {\LARGE\bfseries #1}\\[2pt]
     {\small #2}
   \end{center}\vspace{1pt}}
 \newcommand{\cventry}[4]{%
-  \par\vspace{4pt}%
+  \par\vspace{3pt}%
   \textbf{#2}\par
   \ifne{#3#4#1}{{\small #3\ifne{#4}{, #4}\ifne{#1}{ \textbar{} #1}}\par}}
 \newcommand{\cvpaper}[4]{%
@@ -75,7 +79,7 @@ ATS = COMMON + r"""
 \newcommand{\courseline}[2]{\par\vspace{3pt}{\small\textbf{#1}: #2}\par}
 \newcommand{\plainline}[1]{\par\vspace{3pt}{\small #1}\par}
 \newlist{cvbullets}{itemize}{1}
-\setlist[cvbullets]{leftmargin=1.2em,topsep=1pt,itemsep=0pt,parsep=0pt,label=\textbullet}
+\setlist[cvbullets]{leftmargin=1.2em,topsep=0pt,itemsep=0pt,parsep=0pt,label=\textbullet}
 """
 
 DOCCLASS = r"\documentclass[11pt]{article}"

@@ -30,7 +30,7 @@
       "start": "2026-01",
       "end": "2026-06",
       "details": [],
-      "resume": false
+      "resume": true
     }
   ],
   "research": [
@@ -42,7 +42,7 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Studied Ta-Shma's epsilon-balanced code construction with Prof. Chin Ho Lee as a research partner",
+        "Studied Ta-Shma's epsilon-balanced code construction",
         "Found simpler constructions and minor improvements to the Hsieh-Mohanty-Zheng construction"
       ],
       "resume": true,
@@ -88,12 +88,11 @@
       "end": "",
       "highlights": [
         "Applied Ciucu's Factorization Theorem to decompose tiling enumeration problems into tractable subproblems, working up through independent study of survey papers",
-        "Used Randall paths to determine hexagon-half parameters based on hole parity along the symmetric axis",
         "Computed exact tiling counts by applying the Lindstrom-Gessel-Viennot theorem to determinants of binomial coefficient matrices"
       ],
       "resume": true,
       "dates": "Summer 2024",
-      "resume_brief": true
+      "resume_brief": false
     },
     {
       "role": "Undergraduate Researcher, quantum LDPC codes",
@@ -103,7 +102,8 @@
       "start": "",
       "end": "",
       "highlights": [
-        "Testing whether collision-free geodesic-flow operators on Ramanujan complexes can sharpen iterative-decoder thresholds for quantum LDPC codes"
+        "Categorizing stopping sets in hypergraph product codes",
+        "Understanding Gallagher syndrome decoding outcomes for quantum codes"
       ],
       "resume": true,
       "dates": "Fall 2026",
@@ -166,6 +166,14 @@
       "tech": "python",
       "year": "2026",
       "resume": false
+    },
+    {
+      "name": "Autoresearch machine",
+      "url": "",
+      "blurb": "Designed and benchmarked an LLM-driven theorem-proving pipeline (Lean 4 kernel verification, Slurm-scheduled sampling runs) to measure how often models close formal proof statements.",
+      "tech": "",
+      "year": "2026",
+      "resume": true
     }
   ],
   "coursework": [
@@ -230,7 +238,7 @@
           "name": "Stochastic Processes",
           "code": "MATH 489",
           "grad": false,
-          "resume": false
+          "resume": true
         },
         {
           "name": "Elementary Analysis",
