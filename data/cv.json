@@ -43,7 +43,7 @@
       "end": "",
       "highlights": [
         "Studied Ta-Shma's epsilon-balanced code construction",
-        "Found simpler constructions and minor improvements to the Hsieh-Mohanty-Zheng construction"
+        "Found simpler constructions and minor improvements to the Hsieh-Mohanty-Zhang construction"
       ],
       "resume": true,
       "dates": "Summer 2026",
@@ -103,7 +103,7 @@
       "end": "",
       "highlights": [
         "Categorizing stopping sets in hypergraph product codes",
-        "Understanding Gallagher syndrome decoding outcomes for quantum codes"
+        "Understanding Gallager syndrome decoding outcomes for quantum codes"
       ],
       "resume": true,
       "dates": "Fall 2026",
@@ -371,6 +371,26 @@
     }
   ],
   "talks": [
+    {
+      "text": "Hypergraph Degree Sequences and Fixed-Parameter Tractability: Research Plan",
+      "detail": "Budapest Semesters in Mathematics",
+      "year": "2026"
+    },
+    {
+      "text": "Fixed-Parameter Tractability of t-Uniform Hypergraphicality",
+      "detail": "Budapest Semesters in Mathematics",
+      "year": "2026"
+    },
+    {
+      "text": "Epsilon-Balanced Codes and the Hsieh-Mohanty-Zhang Construction",
+      "detail": "NC State End-of-Summer Research Symposium",
+      "year": "2026"
+    },
+    {
+      "text": "How UNL Opened Doors in Mathematics",
+      "detail": "UNL College Prep Talk",
+      "year": "2026"
+    },
     {
       "text": "Algorithms for the Sumset Recognition Problem",
       "detail": "Harvey Mudd College REU Symposium",

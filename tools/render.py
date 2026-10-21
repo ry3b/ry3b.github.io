@@ -64,14 +64,19 @@ def education(rows, sep="--"):
     return out
 
 
-def research(rows, sep="--"):
+def research(rows, sep="--", advisor_last=False):
+    """advisor_last puts the advisor after the dates, for the one-line ATS layout:
+    mid-line it reads as though the location belonged to the advisor."""
     out = []
     for r in sorted(rows, key=sortkey, reverse=True):
         sub = fill(r.get("org"), "organization")
-        if r.get("advisor"):
+        dates = esc(r["dates"]) if r.get("dates") else daterange(r.get("start"), r.get("end"), sep=sep)
+        if r.get("advisor") and advisor_last:
+            dates += r" \textbar{} Advisor: %s" % esc(r["advisor"])
+        elif r.get("advisor"):
             sub += r" \; \emph{advisor:} %s" % esc(r["advisor"])
         out.append(entry(
-            esc(r["dates"]) if r.get("dates") else daterange(r.get("start"), r.get("end"), sep=sep),
+            dates,
             fill(r.get("role"), "role"),
             sub,
             esc(r.get("location", "")),
@@ -186,10 +191,9 @@ def keep(rows):
 
 def render_resume(data, style_name="ats"):
     p = data["profile"]
-    # advisors belong on the CV; a resume has no use for them.
     # resume_brief entries appear as a title line only -- recent work gets the
     # bullets, older work still gets counted.
-    research_rows = [dict(r, role=plain(r.get("role")), advisor="",
+    research_rows = [dict(r, role=plain(r.get("role")),
                           highlights=[] if r.get("resume_brief") else r.get("highlights"))
                      for r in keep(data.get("research", []))]
     head = r"\cvhead{%s}{%s}" % (fill(p.get("name"), "name"), contact(p))
@@ -199,7 +203,7 @@ def render_resume(data, style_name="ats"):
         ("Education", education(keep(data.get("education", [])), sep=" - ")),
         # the arXiv id lives in the venue line here; a separate links line costs a row
         ("Preprints", papers([dict(pr, links={}) for pr in keep(data.get("papers", []))], p.get("name"))),
-        ("Research Experience", research(research_rows, sep=" - ")),
+        ("Research Experience", research(research_rows, sep=" - ", advisor_last=True)),
         # no URLs on the resume: the repos are on the GitHub profile in the header
         ("Projects", projects([dict(pr, url="") for pr in keep(data.get("projects", []))])),
         ("Skills", skills(data.get("skills", []))),
